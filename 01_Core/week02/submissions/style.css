@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: -20px -20px 0 -20px;
+    background-color: turquoise;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+.nav-item:hover {
+    background-color: lightgray;
+}
+
+.container {
+    margin: 50px 75px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 1px dashed white;
+    margin: 20px;
+}
+
+.list-item {
+    margin: 10px;
+}
+
+.rainbow-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#rainbow-img{
+    width: 350px; 
+    height: 233px;
+}
+
+.button {
+  background-color: turquoise;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  margin: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.form-group {
+    font-size: 12px;
+}
+
+.form-item {
+    margin: 10px;
+}
+
+.submit {
+    display: block; 
+    padding: 5px 20px;
+
+}
+
+.red {
+    color: red
+}
+
+.orange {
+    color: orange
+}
+
+.yellow {
+    color: yellow
+}
+
+.green {
+    color: green
+}
+
+.blue {
+    color: blue
+}
+
+.indigo {
+    color: indigo
+}
+
+.violet {
+    color: violet
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 0px 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    padding-right: 5px;
+}
+
+#names-list {
+    margin-top: 10px;
+    width: 80%
+}

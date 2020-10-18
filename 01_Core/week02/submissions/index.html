@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelton's Average Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/949857de7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav-list">
+            <a href="" class="nav-item">Home</a>
+            <a href="" class="nav-item">About</a>
+            <a href="" class="nav-item">Profile</a>
+            <a href="" class="nav-item">Blog</a>
+            <a href="" class="nav-item">Logout</a>
+        </ul>
+        <div class="title">
+            <h1>Welcome to Kelton's Website!</h1>
+        </div>
+        <h4>Ever wondered what the colors of the rainbow were? We're here to help ...</h4>
+        <div class="rainbow-content">
+            <ul class="list">
+                <li class = 'red list-item'>Red</li>
+                <li class = 'orange list-item'>Orange</li>
+                <li class = 'yellow list-item'' >Yellow</li>
+                <li class = 'green list-item''>Green</li>
+                <li class = 'blue list-item''>Blue</li>
+                <li class = 'indigo list-item''>Indigo</li>
+                <li class = 'violet list-item'>Violet</li>
+            </ul>
+            <img src="https://c.tadst.com/gfx/600x337/rainbow.jpg?1" id="rainbow-img">
+        </div>
+        <h4>Quick question, who is the greatest of all time?</h4>
+        <button class="button" id="lebron">Lebron James</button>
+        <button class='button' id="mj">Michael Jordan</button>
+        <h4>Sign up for the newsletter below!</h4>
+        <form action="get">
+            <div class="form-group">
+                <div>What's your first and last name?</div>
+                <div class="full-name list-item">
+                    <input type="text" id='fname' name='fname' placeholder="First Name">
+                    <input type="text" id='lname' name='lname' placeholder="Last Name"> 
+                </div>
+                <div>What' gender do you identify as?</div>
+                <div class="gender list-item">
+                    <input type="radio" class="radio" name='gender' id='male'>
+                    <label for="male">Male</label>
+                    <input type="radio" class='radio' name="gender" id='female'>
+                    <label for="female">Female</label>
+                </div>
+                <div>What's your favorite sport?</div>
+                <select name="favSport" id='favSport' class="form-item">
+                    <option value="noselection">Choose an option...</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="baseball">Baseball</option>
+                    <option value="chess">Chess</option>
+                    <option value="football">Football</option>
+                    <option value="hockey">Hockey</option>
+                    <option value="lacross">Lacrosse</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="video-games">Video Games</option>
+                </select>
+                <button class="submit list-item" id='submit'>Save</button>
+            </div>
+        </form>
+        <div class="name-list">
+            <div>Give a comma separated list of names</div>
+            <input type="text" id="names-list">
+            <button id="name-submit">Submit</button>
+        </div>
+        <ol class="name-display">
+            <!-- Names will be added here -->
+        </ol>
+    </div>
+</body>
+<footer class="footer">
+    <p>Published October 2020</p>
+    <p>A Kelton Williams production</p>
+    <div>
+        <div class='social-media'>
+            <i class="fab fa-github-square"></i>
+            <div>https://github.com/willkc15/</div>
+        </div>
+        <div class='social-media'>
+            <i class="fab fa-twitter-square"></i>
+            <div>@keltonwilliams5</div>
+        </div>
+        <div class='social-media'>
+            <i class="fab fa-linkedin"></i>
+            <div>www.linkedin.com/in/kelton-williams</div>
+        </div>
+    </div>
+</footer>
+<script src="controller.js"></script>
+</html>
+
