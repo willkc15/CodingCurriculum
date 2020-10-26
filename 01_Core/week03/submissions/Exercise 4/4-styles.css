@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.interior {
+    width: 100px;
+    height: 100px;
+    border: white solid 5px;
+    margin: 0;
+}
+
+.div1 {
+    background-color: red;
+}   
+
+.div2 {
+    background-color: orange;
+    position: relative;
+    top: -60px;
+    left: 50px;
+}
+
+.div3 {
+    background-color: yellow;
+    position:relative;
+    top: -120px;
+    left: 100px;
+}
+
+.div4 {
+    background-color: blue;
+    position: relative;
+    top: -180px;
+    left: 150px;
+}
+
+.div5 {
+    background-color: plum;
+    position: relative;
+    top: -240px;
+    left: 200px;
+}
