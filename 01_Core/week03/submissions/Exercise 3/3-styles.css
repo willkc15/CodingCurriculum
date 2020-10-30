@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 120px 120px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.interior {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.div1, .div2, .div3, .div4 {
+    background-color: blue;
+}
+.div5 {
+    position: relative;
+    background-color: red;
+    transform: rotate(45deg);
+    top: -190px;
+    left: 50%;
+
+}
+
+.div5:after {
+    transform: rotate(-45deg);
+    position: absolute;
+    content: ' \2605';
+    background-color: white;
+    font-size: 1.5em;
+    border-radius: 50%;
+    bottom: 32px;
+    right: 32px;
+    height: 35%;
+    width: 35%;
+    text-align: center;
+}

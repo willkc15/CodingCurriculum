@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 120px 120px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+
+.interior {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.div1, .div2, .div3, .div4 {
+    background-color: blue;
+}
+.div5 {
+    position: relative;
+    top: -150%;
+    left: 50%;
+    background-color: red;
+    margin: 10px;
+}

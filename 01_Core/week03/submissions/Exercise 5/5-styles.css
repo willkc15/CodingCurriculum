@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.interior {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.div1 {
+    background-color: red;
+}   
+
+.div2 {
+    background-color: orange;
+}
+
+.div3 {
+    background-color: yellow;
+}
+
+.div4 {
+    background-color: blue;
+    position:relative;
+    border: white solid 5px;
+    top: -60px;
+}
+
+.div5 {
+    background-color: plum;
+    position:relative;
+    border: white solid 5px;
+    top: -60px;
+}

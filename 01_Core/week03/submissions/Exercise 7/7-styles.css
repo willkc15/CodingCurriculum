@@ -1,0 +1,107 @@
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 0 10%;
+}
+
+.interior {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.interior:before {
+    content: ' ';
+    position: relative;
+    display: inline-block;
+    left: -240px;
+    width: 100px;
+    height: 100px;
+    margin-left: 20%;
+}
+
+.interior:after {
+    content: ' ';
+    position: absolute;
+    display:inline-block;
+    top: 0px;
+    left: -120px;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 0 10px;
+}
+
+.div1 {
+    background-color: red;
+    opacity: 100%;
+}   
+
+.div1:before {
+    background-color: red;
+    opacity: 50%;
+}
+
+.div1:after {
+    background-color: red;
+    opacity: 75%;
+}
+
+.div2 {
+    background-color: orange;
+}
+
+.div2:before {
+    background-color: orange;
+    opacity: 50%;
+}
+
+.div2:after {
+    background-color: orange;
+    opacity: 75%;
+}
+
+.div3 {
+    background-color: yellow;
+}
+
+.div3:before {
+    background-color: yellow;
+    opacity: 50%;
+}
+
+.div3:after {
+    background-color: yellow;
+    opacity: 75%;
+}
+
+
+.div4 {
+    background-color: blue;
+}
+
+.div4:before {
+    background-color: blue;
+    opacity: 50%;
+}
+
+.div4:after {
+    background-color: blue;
+    opacity: 75%;
+}
+
+
+.div5 {
+    background-color: plum;
+}
+
+.div5:before {
+    background-color: plum;
+    opacity: 50%;
+}
+
+.div5:after {
+    background-color: plum;
+    opacity: 75%;
+}
