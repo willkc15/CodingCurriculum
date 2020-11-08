@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Sauce Store</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/949857de7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="nav">
+        <a href="index.html" class="logo">
+            <img src="images/assets/logo.png">
+            <div class="logo__text">
+                <div class="logo__title">Pepperich</div>
+                <div class="logo__slogan">If it's hot, we have it</div>
+            </div>
+        </a>
+        <div class="nav__list">
+            <a href="index.html" class="nav__item">Home</a>
+            <a href="products.html" class="nav__item">Products</a>
+            <a href="contact.html" class="nav__item">Contact Us</a>
+        </div>
+        <a id="mobile-nav-icon">
+            <i class="fas fa-bars fa-2x "></i> 
+        </a>
+    </nav>
+    <!-- Search -->
+    <h1 class="title" id="product-title">Products</h1>
+    <div class="search">
+        <input type="text" placeholder="Search...">
+        <span class="button" id="advanced-search-button">Advanced Search</span>
+    </div>
+    <div class="advanced-search fade-in">
+        <h1 class="advanced-search__title">Filters</h1>
+        <i class="far fa-window-close advanced-search__close"></i>
+        <div class="advanced-search__filter">
+            <div class="filter__title">Price:</div>
+            <select name="priceOptions" id="price-options" class="filter__options">
+                <option value="5">Less than $5</option>
+                <option value="10">Less than $10</option>
+                <option value="15">Less than $15</option>
+                <option value="15+">More than $15</option>
+            </select>
+        </div>
+        <div class="advanced-search__filter">
+            <div class="filter__title">Brand:</div>
+            <select name="brandOptions" id="brand-options" class="filter__options">
+                <option value="a-la-brava">A La Brava</option>
+                <option value="angry-goat">Angry Goat</option>
+                <option value="bravado">Bravado</option>
+                <option value="heatonist">Heatonist</option>
+                <option value="hot-ones">Hot Ones</option>
+                <option value="marie-sharps">Marie Sharp's</option>
+                <option value="queen-majesty">Queen Majesty</option>
+                <option value="secret-aardvark">Secret Aardvark</option>
+                <option value="torchbearer-sauces">Torchbearer Sauces</option>
+            </select>
+        </div>
+        <div class="advanced-search__filter">
+            <div class="filter__title">Heat Level:</div>
+            <select name="heatOptions" id="heat-options" class="filter__options">
+                <option value="1">Mild</option>
+                <option value="2">Medium</option>
+                <option value="3">Hot</option>
+            </select>
+        </div>
+        <div class="advanced-search__filter">
+            <div class="filter__title">Ingredients:</div>
+            <select name="ingredientsOptions" id="ingredients-options" class="filter__options">
+                <option value="jalapenos">Jalapenos</option>
+                <option value="habaneros">Habaneros</option>
+                <option value="cayenne-pepper">Cayenne Pepper</option>
+                <option value="ghost-pepper">Ghost Pepper</option>
+                <option value="carolina-reaper">Carolina Reaper</option>
+                <option value="vinegar">Vinegar</option>
+                <option value="tomato">Tomato</option>
+                <option value="carrot">Carrot</option>
+            </select>
+        </div>
+    </div>
+    <!-- Products  -->
+    <div class="product-list--col1 product-list--col4">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/a-la-brava.jpg" alt="Heatonist | Heartbeat" class="product-list__image">
+            <h5 class="product-list__title">A La Brava | Autentica Salsa Diabla</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$8.00</div>
+        </a>
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/belizean-heat.jpg" alt="Marie Sharp's | Belizean Heat" class="product-list__image">
+            <h5 class="product-list__title">Marie Sharp's | Belizean Heat</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$10.00</div>
+        </a>
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/bravado-pineapple-habanero.jpg" alt="Bravado | Pineapple & Habanero Hot Sauce" class="product-list__image">
+            <h5 class="product-list__title">Bravado | Pineapple & Habanero</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$12.00</div>
+        </a>
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/dawsons.jpg" alt="Dawson's | Original Hot" class="product-list__image">
+            <h5 class="product-list__title">Dawson's | Original Hot</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$8.99</div>
+        </a>
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/heatonist-heartbeat.jpg" alt="Heatonist| Heartbeat Hot Sauce" class="product-list__image">
+            <h5 class="product-list__title">Heatonist| Heartbeat Hot Sauce</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$7.00</div>
+        </a>
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/hippy-dippy-green.jpg" alt="Angry Goat | Hippy Dippy Green" class="product-list__image">
+            <h5 class="product-list__title">Angry Goat | Hippy Dippy Green</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$11.00</div>
+        </a>
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/los-calientes.jpg" alt="Hot Ones | Los Calientes" class="product-list__image">
+            <h5 class="product-list__title">Hot Ones | Los Calientes</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$8.00</div>
+        </a>
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/queen-majesty-jalapeno.jpg" alt="Queen Majesty | Jalapeno, Tequila, and Lime" class="product-list__image">
+            <h5 class="product-list__title">Queen Majesty | Jalapeno Tequila</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$11.00</div>
+        </a>
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/secret-aardvark.png" alt="Secret Aardvark | Habanero Hot Sauce" class="product-list__image">
+            <h5 class="product-list__title">Secret Aardvark | Habanero Hot Sauce</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$6.00</div>
+        </a>
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/the-last-dab.jpg" alt="Hot Ones | The Last Dab XXX" class="product-list__image">
+            <h5 class="product-list__title">Hot Ones | The Last Dab XXX</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$12.00</div>
+        </a>
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/zombie-apocalypse.jpg" alt="Torchbearer Sauces | Zombie Apocalpyse" class="product-list__image">
+            <h5 class="product-list__title">Torchbearer | Zombie Apocalpyse</h5>
+            <div class="product-list__hotness">
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+                <i class="fas fa-pepper-hot fa-lg"></i>
+            </div>
+            <div class="product-list__price">$10.00</div>
+        </a>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer__item footer__links">
+            <h3>Helpful Links</h3>
+            <p>Order Now</p>
+            <p>Best Deals</p>
+            <p>Sauces from Hot Ones</p>
+            <p>Search</p>
+            <p>FAQ</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="footer__item footer__social">
+            <h3>Get Connected</h3>
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="fab fa-instagram-square fa-2x"></i>
+            <i class="fab fa-twitter-square fa-2x"></i>
+        </div>
+        <div class="footer__item footer__copyright">
+            <p>Copyright &#169 Kelton Williams. All rights reserved</p>
+            <p>1-909-720-2320</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
