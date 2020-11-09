@@ -8,14 +8,14 @@
     text-decoration: none;
 }
 
-
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
-.nav__container {
+/* NAVBAR */
+
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,10 +81,10 @@ body {
     margin-top: -16px;
 }
 
-/* Nav for desktop */
+/* NAVBARK - DESKTOP */
 @media (min-width: 800px) {
 
-    .nav__container {
+    .nav{
         display: flex;
         align-items: center;
         position: fixed;
@@ -126,7 +126,8 @@ body {
 
 }
 
-.hero__container {
+/* HERO IMAGE */
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,11 +179,9 @@ body {
     font-size: 2.5vw;
 }
 
-/* Desktop hero */
-/* Typically would just make this an image but I don't have photoshop
-so have to resize every placement of each image*/
+/* HERO IMAGE - DESKTOP */
 @media (min-width: 800px) {
-    .hero__container {
+    .hero {
         height: 60vh;
     }
 
@@ -202,54 +201,7 @@ so have to resize every placement of each image*/
     }
 }
 
-.button {
-    cursor: pointer;
-    color: white;
-    border: 1px solid transparent;
-    padding: 8px 12px;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    font-size: 2.5vw;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.btn-sm {
-    width: 25%;
-}
-
-.btn-md {
-    width: 50%;
-}
-
-.btn-lg {
-    width: 75%;
-}
-
-.btn-xl {
-    width: 100%;
-}
-
-.btn-cart {
-    font-size: 1rem;
-    margin-bottom: 40px;
-}
-
-.btn-cart i {
-    margin-right: 5px;
-}
-
-.button:hover {
-    background-color: darkred;
-    border: 1px solid white;
-}
-
-.section__container {
-    margin: 10px 20px;
-    padding: 30px 0;
-    background-color: var(--secondary-color);
-}
-
+/* SLIDESHOW */
 .slideshow-container {
     position: relative;
     max-width: 400px;
@@ -311,7 +263,14 @@ so have to resize every placement of each image*/
     border: black;
 }
 
-.product__grid {
+/* PRODUCTS*/
+
+.product-list--col1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+}
+.product-list--col2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 10px;
@@ -325,6 +284,13 @@ so have to resize every placement of each image*/
     margin: 5px;
     padding: 10px 5px;
     text-align: center;
+    color: black;
+}
+
+.product-list__item {
+    text-align: center;
+    width: 100%;
+    margin: 50px 10px;
     color: black;
 }
 
@@ -359,78 +325,19 @@ so have to resize every placement of each image*/
     margin: 10px -3px 10px 0;
 }
 
-.product--wide {
-    text-align: center;
-    width: 100%;
-    margin: 100px 10px;
-    color: black;
-}
 
+/* PRODUCTS - DESKTOP */
 @media (min-width:800px) {
-    .product__grid {
+    .product-list--col4 {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-footer {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: auto;
-    color: gray;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    margin: 40px 20px;
-    font-size: 0.8rem;
-}
-
-.footer__item {
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-footer i {
-    margin: 10px 10px 10px 0;
-}
-
-.footer__copyright {
-    text-align: center
-}
-
-@media (min-width: 800px) {
-    footer {
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-    }
-}
-
-/* Toggles */
-.display-mobile-nav { 
-    display: flex;
-}
-
-.display-icon-red {
-    color: darkred;
-}
 
 
 
-
-.section__title {
-    font-size: 6vw;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin: 80px 20% 50px 20%;
-}
-
-@media (min-width: 800px) {
-    .section__title {
-        font-size: 3vw;
-    }
-}
-
-/* Products page specific stuff */
-.search__container {
+/* SEARCH */
+.search {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 15vh;
@@ -441,7 +348,7 @@ footer i {
     text-align: center;
 }
 
-.search__container input[type=text] {
+.search input[type=text] {
     width: 100%;
     height: 50%;
     border-radius: 5px;
@@ -451,28 +358,18 @@ footer i {
     font-size: 1rem;
 }
 
-.search__container label {
-    display: block;
-    margin: 5px 0;
-    font-weight: 400;
-}
-
-.search__container select {
-    font-size: 1rem;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
 #advanced-search-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     height: 50%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 0 0 0 10px;
-    padding: 5px 10px;
+    padding: 8px 12px;
     border-radius: 5px;
 }
 
-.advanced-search__container {
+.advanced-search {
     position: relative;
     display: none;
     margin: 20px 0;
@@ -481,29 +378,23 @@ footer i {
     height: auto;
 }
 
-.advanced-search__container h3 {
+.advanced-search__title {
     text-align: center;
 }
 
-.advanced-search__container i {
+.advanced-search__close {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
     color: red;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .advanced-search__filter {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 20px 0;
-}
-
-.operator__dropdown {
-    border: 1px solid gray;
-    border-radius: 3px;
-    width: 50px;
-    justify-self: center;
 }
 
 .filter__options {
@@ -512,22 +403,23 @@ footer i {
     width: 100%;
 }
 
-#advanced-search-close {
-    cursor: pointer;
-}
-
-
-
+/* SEARCH _ DESKTOP */
 @media (min-width: 800px) {
-    .advanced-search__container {
+
+    .search {
+        width: 70vw;
         margin: auto;
-        width: 80%;
+    }
+
+    .advanced-search {
+        width: 70vw;
+        margin: auto;
     }
 }
 
-/* contact form */
+/* CONTACT FORM */
 
-.contact__container {
+.contact-form{
     margin: auto;
     background-color: var(--secondary-color);
 }
@@ -594,24 +486,14 @@ footer i {
 }
 
 @media (min-width: 800px) {
-    .contact__container {
+    .contact-form {
         width: 40%;
     }
 }
 
-/* product details page */
-
-#product-title {
-    margin-top: 150px;
-}
-
-.product__container {
+/* PRODUCT DETAILS */
+.product-details {
     width: 100%;
-}
-
-.product-page__container {
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 .product-details__image {
@@ -635,19 +517,120 @@ footer i {
     color: rgb(254,198,0);
 }
 
+#product-title {
+    margin-top: 150px;
+}
+
 @media (min-width: 800px) {
 
-    .product__container {
+    .product-details {
         width: 60%;
         margin: auto;
     }
+}
 
-    .product-page__container {
-        grid-template-columns: repeat(4, 1fr);
+/* FOOTER */
+footer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    color: gray;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin: 40px 20px;
+    font-size: 0.8rem;
+}
+
+.footer__item {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+footer i {
+    margin: 10px 10px 10px 0;
+}
+
+.footer__copyright {
+    text-align: center
+}
+
+/* FOOTER - DESKTOP */
+@media (min-width: 800px) {
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
     }
 }
 
-/* animations */
+/* TOGGLES */
+.display-mobile-nav { 
+    display: flex;
+}
+
+/* GENERIC CLASSES */
+.button {
+    cursor: pointer;
+    color: white;
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn-sm {
+    width: 25%;
+}
+
+.btn-md {
+    width: 50%;
+}
+
+.btn-lg {
+    width: 75%;
+}
+
+.btn-xl {
+    width: 100%;
+}
+
+.btn-cart {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.btn-cart i {
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: darkred;
+    border: 1px solid white;
+}
+
+.section__container {
+    margin: 10px 20px;
+    padding: 30px 0;
+    background-color: var(--secondary-color);
+}
+
+.title {
+    font-size: 6vw;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin: 80px 20% 50px 20%;
+}
+
+@media (min-width: 800px) {
+    .title{
+        font-size: 3vw;
+    }
+}
+
+/* ANIMATIONS */
 
 .fade-in {
     animation: fadeIn ease 0.5s;

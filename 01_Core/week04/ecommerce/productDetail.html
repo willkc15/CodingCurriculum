@@ -13,8 +13,7 @@
 
 
     <!-- Nav -->
-
-    <nav class="nav__container">
+    <nav class="nav">
         <a href="index.html" class="logo">
             <img src="images/assets/logo.png">
             <div class="logo__text">
@@ -31,42 +30,33 @@
             <i class="fas fa-bars fa-2x "></i> 
         </a>
     </nav>
-
-
-    <!-- Contact form -->
-    <div class="contact__container">
-        <h3 id="form-intro">We'll contact you! Fill the form out below and we'll reach out soon.</h3>
-        <form action="contact.html" method="GET">
-            <div class="contact-form__container">
-                <label for="name-field">Full name</label>
-                <input name="name" id="name-field"type="text" required>
-                <label for="phone-field">Phone number</label>
-                <input name="phone" id="phone-field" type="tel" placeholder="e.g. 9097202320" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-                <label for="email-field">Email</label>
-                <input name="email" id="email-field" type="email" placeholder="e.g. johndoe@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                <p>How would you like to be contacted?</p>
-                <div class="contact-form__radio">
-                    <div class="radio__input">
-                        <input type="radio" name="contact" value="phone">
-                        <span class="radio__label">Phone</span>
-                    </div>
-                    <div class="radio__input">
-                        <input type="radio" name="contact" value="email">
-                        <span class="radio__label">Email</span>
-                    </div>
-                </div>
-                <input type="submit" class="button btn-sm" id="contact-form-submit">  
-            </div>     
-        </form>
+    <!-- Product Details -->
+    <div class="product-details">
+        <div class="product-details__image">
+            <img src="/images/product-square/bravado-pineapple-habanero.jpg" alt="">
+        </div>
+        <div class="product-details__container">
+            <h2>Bravado | Pineapple Habanero</h2>
+            <div class="product-details__reviews">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>127 Reviews</span>
+            </div>
+            <h3>$12.00</h3>
+            <div class="button btn-md btn-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Add to Cart</span>
+            </div>
+            <p class="product-details__description">Fresh pineapple dominates this sauce, shining through the habanero heat. Yellow bell pepper lends only a touch of sweetness. A great option for people who like fruit sauces but not overly sweet ones. Goes well with rice & beans, fish dishes, or mixed into a salad dressing.</p>
+            <p class="product-details__ingredients"><b>Ingredients:</b> Pineapple, white wine vinegar, yellow bell peppers, habanero, garlic, salt</p>
+            <p class="product-details__size"><b>Size:</b> 5 oz</p>
+        </div>
     </div>
-
-
-
-
-
-    <!-- Footer -->
-
-    <footer>
+      <!-- Footer -->
+      <footer>
         <div class="footer__item footer__links">
             <h3>Helpful Links</h3>
             <p>Order Now</p>
@@ -87,7 +77,6 @@
             <p>1-909-720-2320</p>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 

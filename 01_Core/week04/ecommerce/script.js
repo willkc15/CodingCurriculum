@@ -5,8 +5,8 @@ const queryStrings = {
     mobileNavIcon: '#mobile-nav-icon',
     navList: '.nav__list',
     advancedSearchButton: '#advanced-search-button',
-    advancedSearchContainer: '.advanced-search__container',
-    advancedSearchClose: '#advanced-search-close'
+    advancedSearchContainer: '.advanced-search',
+    advancedSearchClose: '.advanced-search__close'
 }
 
 function SlideArray (base, size) {
@@ -55,7 +55,6 @@ const toggleMobileNav = () => {
     let navMenu = document.querySelector(queryStrings.navList);
     let navIcon = document.querySelector(queryStrings.mobileNavIcon);
     navMenu.classList.toggle("display-mobile-nav");
-    navIcon.classList.toggle("display-icon-red");
 }
 
 const toggleAdvancedSearch = () => {

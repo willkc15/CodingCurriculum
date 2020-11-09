@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- NAV -->
-    <nav class="nav__container">
+    <nav class="nav">
         <a href="index.html" class="logo">
             <img src="images/assets/logo.png">
             <div class="logo__text">
@@ -27,40 +27,26 @@
             <i class="fas fa-bars fa-2x "></i> 
         </a>
     </nav>
-
-
-
-
-
-
     <!-- Search -->
-    <h1 class="section__title" id="product-title">Products</h1>
-    <div class="search__container">
+    <h1 class="title" id="product-title">Products</h1>
+    <div class="search">
         <input type="text" placeholder="Search...">
         <span class="button" id="advanced-search-button">Advanced Search</span>
     </div>
-    <div class="advanced-search__container fade-in">
-        <h3>Filters</h3>
-        <i class="far fa-window-close" id="advanced-search-close"></i>
+    <div class="advanced-search fade-in">
+        <h1 class="advanced-search__title">Filters</h1>
+        <i class="far fa-window-close advanced-search__close"></i>
         <div class="advanced-search__filter">
-            <label for="price-operator">Price:</label>
-            <select name="priceOperator" id="price-operator" class="operator__dropdown">
-                <option value="equals">=</option>
-                <option value="lessThan">&lt</option>
-                <option value="greaterThan">&gt</option>
-            </select>
+            <div class="filter__title">Price:</div>
             <select name="priceOptions" id="price-options" class="filter__options">
-                <option value="5">$5</option>
-                <option value="10">$10</option>
-                <option value="15">$15</option>
-                <option value="20">$20</option>
+                <option value="5">Less than $5</option>
+                <option value="10">Less than $10</option>
+                <option value="15">Less than $15</option>
+                <option value="15+">More than $15</option>
             </select>
         </div>
         <div class="advanced-search__filter">
-            <label for="brand-operator">Brand:</label>
-            <select name="brandOperator" id="brand-operator" class="operator__dropdown">
-                <option value="equals">=</option>
-            </select>
+            <div class="filter__title">Brand:</div>
             <select name="brandOptions" id="brand-options" class="filter__options">
                 <option value="a-la-brava">A La Brava</option>
                 <option value="angry-goat">Angry Goat</option>
@@ -74,12 +60,7 @@
             </select>
         </div>
         <div class="advanced-search__filter">
-            <label for="heat-operator">Heat Level:</label>
-            <select name="heatOperator" id="heat-operator" class="operator__dropdown">
-                <option value="equals">=</option>
-                <option value="lessThan">&lt</option>
-                <option value="greaterThan">&gt</option>
-            </select>
+            <div class="filter__title">Heat Level:</div>
             <select name="heatOptions" id="heat-options" class="filter__options">
                 <option value="1">Mild</option>
                 <option value="2">Medium</option>
@@ -87,10 +68,7 @@
             </select>
         </div>
         <div class="advanced-search__filter">
-            <label for="ingredients-operator">Ingredients:</label>
-            <select name="ingredientsOperator" id="ingredients-operator" class="operator__dropdown">
-                <option value="equals">=</option>
-            </select>
+            <div class="filter__title">Ingredients:</div>
             <select name="ingredientsOptions" id="ingredients-options" class="filter__options">
                 <option value="jalapenos">Jalapenos</option>
                 <option value="habaneros">Habaneros</option>
@@ -103,22 +81,18 @@
             </select>
         </div>
     </div>
-
-
-
-
-    <!-- Product  -->
-    <div class="product-page__container">
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/a-la-brava.jpg" alt="Heatonist | Heartbeat" class="product-list__image">
+    <!-- Products  -->
+    <div class="product-list--col1 product-list--col4">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/a-la-brava.jpg" alt="Heatonist | Heartbeat" class="product-list__image">
             <h5 class="product-list__title">A La Brava | Autentica Salsa Diabla</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
             </div>
             <div class="product-list__price">$8.00</div>
         </a>
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/belizean-heat.jpg" alt="Marie Sharp's | Belizean Heat" class="product-list__image">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/belizean-heat.jpg" alt="Marie Sharp's | Belizean Heat" class="product-list__image">
             <h5 class="product-list__title">Marie Sharp's | Belizean Heat</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -126,8 +100,8 @@
             </div>
             <div class="product-list__price">$10.00</div>
         </a>
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/bravado-pineapple-habanero.jpg" alt="Bravado | Pineapple & Habanero Hot Sauce" class="product-list__image">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/bravado-pineapple-habanero.jpg" alt="Bravado | Pineapple & Habanero Hot Sauce" class="product-list__image">
             <h5 class="product-list__title">Bravado | Pineapple & Habanero</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -135,8 +109,8 @@
             </div>
             <div class="product-list__price">$12.00</div>
         </a>
-        <a href="productDetail.html"  class="product--wide">
-            <img src="/images/product-square/dawsons.jpg" alt="Dawson's | Original Hot" class="product-list__image">
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/dawsons.jpg" alt="Dawson's | Original Hot" class="product-list__image">
             <h5 class="product-list__title">Dawson's | Original Hot</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -144,8 +118,8 @@
             </div>
             <div class="product-list__price">$8.99</div>
         </a>
-        <a href="productDetail.html"  class="product--wide">
-            <img src="/images/product-square/heatonist-heartbeat.jpg" alt="Heatonist| Heartbeat Hot Sauce" class="product-list__image">
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/heatonist-heartbeat.jpg" alt="Heatonist| Heartbeat Hot Sauce" class="product-list__image">
             <h5 class="product-list__title">Heatonist| Heartbeat Hot Sauce</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -154,24 +128,24 @@
             </div>
             <div class="product-list__price">$7.00</div>
         </a>
-        <a href="productDetail.html"  class="product--wide">
-            <img src="/images/product-square/hippy-dippy-green.jpg" alt="Angry Goat | Hippy Dippy Green" class="product-list__image">
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/hippy-dippy-green.jpg" alt="Angry Goat | Hippy Dippy Green" class="product-list__image">
             <h5 class="product-list__title">Angry Goat | Hippy Dippy Green</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
             </div>
             <div class="product-list__price">$11.00</div>
         </a>
-        <a href="productDetail.html"  class="product--wide">
-            <img src="/images/product-square/los-calientes.jpg" alt="Hot Ones | Los Calientes" class="product-list__image">
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/los-calientes.jpg" alt="Hot Ones | Los Calientes" class="product-list__image">
             <h5 class="product-list__title">Hot Ones | Los Calientes</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
             </div>
             <div class="product-list__price">$8.00</div>
         </a>
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/queen-majesty-jalapeno.jpg" alt="Queen Majesty | Jalapeno, Tequila, and Lime" class="product-list__image">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/queen-majesty-jalapeno.jpg" alt="Queen Majesty | Jalapeno, Tequila, and Lime" class="product-list__image">
             <h5 class="product-list__title">Queen Majesty | Jalapeno Tequila</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -179,16 +153,16 @@
             </div>
             <div class="product-list__price">$11.00</div>
         </a>
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/secret-aardvark.png" alt="Secret Aardvark | Habanero Hot Sauce" class="product-list__image">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/secret-aardvark.png" alt="Secret Aardvark | Habanero Hot Sauce" class="product-list__image">
             <h5 class="product-list__title">Secret Aardvark | Habanero Hot Sauce</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
             </div>
             <div class="product-list__price">$6.00</div>
         </a>
-        <a href="productDetail.html"  class="product--wide">
-            <img src="/images/product-square/the-last-dab.jpg" alt="Hot Ones | The Last Dab XXX" class="product-list__image">
+        <a href="productDetail.html"  class="product-list__item">
+            <img src="images/product-square/the-last-dab.jpg" alt="Hot Ones | The Last Dab XXX" class="product-list__image">
             <h5 class="product-list__title">Hot Ones | The Last Dab XXX</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -197,8 +171,8 @@
             </div>
             <div class="product-list__price">$12.00</div>
         </a>
-        <a href="productDetail.html" class="product--wide">
-            <img src="/images/product-square/zombie-apocalypse.jpg" alt="Torchbearer Sauces | Zombie Apocalpyse" class="product-list__image">
+        <a href="productDetail.html" class="product-list__item">
+            <img src="images/product-square/zombie-apocalypse.jpg" alt="Torchbearer Sauces | Zombie Apocalpyse" class="product-list__image">
             <h5 class="product-list__title">Torchbearer | Zombie Apocalpyse</h5>
             <div class="product-list__hotness">
                 <i class="fas fa-pepper-hot fa-lg"></i>
@@ -208,14 +182,6 @@
             <div class="product-list__price">$10.00</div>
         </a>
     </div>
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <footer>
         <div class="footer__item footer__links">
@@ -238,8 +204,7 @@
             <p>1-909-720-2320</p>
         </div>
     </footer>
-
-
+    
     <script src="script.js"></script>
 
 </body>
