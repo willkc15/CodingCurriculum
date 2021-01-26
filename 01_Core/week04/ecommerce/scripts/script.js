@@ -1,3 +1,5 @@
+
+
 const queryStrings = {
     slideshowImage: '.slideshow__image',
     prevArrow: '.slider--prev',
@@ -53,7 +55,7 @@ SlideArray.prototype.nextImage = function(element, direction='forward') {
 
 const toggleMobileNav = () => {
     let navMenu = document.querySelector(queryStrings.navList);
-    let navIcon = document.querySelector(queryStrings.mobileNavIcon);
+//    let navIcon = document.querySelector(queryStrings.mobileNavIcon);
     navMenu.classList.toggle("display-mobile-nav");
 }
 
@@ -106,5 +108,3 @@ const init = () => {
 
 let slidesArray = new SlideArray('images/slideshow/slideshow', 4);
 init();
-
-lsdfsdalks

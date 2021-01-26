@@ -8,5 +8,20 @@ services:
             - "3307:3306"
         volumes: 
             - dbvol:/var/lib/mysql
+        networks:
+            - backend
+    # api:
+    #     build: ./app
+    #     ports:
+    #         - "8000:8000"
+    #     depends_on: 
+    #         - db
+    #     networks: 
+    #         - backend
+    #         - frontend
+
 volumes: 
     dbvol:
+networks:
+    backend:
+    frontend:

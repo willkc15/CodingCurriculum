@@ -40,3 +40,5 @@ func checkLink(link string, c chan string) {
 	fmt.Println(link, "is up!")
 	c <- link
 }
+
+asdfasdf
