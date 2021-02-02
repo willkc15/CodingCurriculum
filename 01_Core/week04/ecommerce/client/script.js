@@ -1,15 +1,4 @@
-
-
-const queryStrings = {
-    slideshowImage: '.slideshow__image',
-    prevArrow: '.slider--prev',
-    nextArrow: '.slider--next',
-    mobileNavIcon: '#mobile-nav-icon',
-    navList: '.nav__list',
-    advancedSearchButton: '#advanced-search-button',
-    advancedSearchContainer: '.advanced-search',
-    advancedSearchClose: '.advanced-search__close'
-}
+import { queryStrings, getHtmlFromSpice, toggleMobileNav} from './utils.js'
 
 function SlideArray (base, size) {
     this.cache = [];
@@ -46,26 +35,8 @@ SlideArray.prototype.nextImage = function(element, direction='forward') {
     if (this.index < 0) {
         this.index = this.size - 1;
     }
-
-    
     element.src = this.cache[this.index].src;
     dots[this.index].classList.add('dot--selected');
-
-}
-
-const toggleMobileNav = () => {
-    let navMenu = document.querySelector(queryStrings.navList);
-//    let navIcon = document.querySelector(queryStrings.mobileNavIcon);
-    navMenu.classList.toggle("display-mobile-nav");
-}
-
-const toggleAdvancedSearch = () => {
-    let advancedSearchContainer = document.querySelector(queryStrings.advancedSearchContainer);
-    advancedSearchContainer.style.display = 'block';
-}
-
-const closeWindow = (el) => {
-    el.style.display = 'none';
 }
 
 const addListeners = () => {
@@ -85,26 +56,34 @@ const addListeners = () => {
             toggleMobileNav();
         })
     }
+}
 
-    if (document.querySelector(queryStrings.advancedSearchButton)) {
-        document.querySelector(queryStrings.advancedSearchButton).addEventListener('click', () => {
-            toggleAdvancedSearch()
-        });
-    }
-
-    if(document.querySelector(queryStrings.advancedSearchClose)) {
-        document.querySelector(queryStrings.advancedSearchClose).addEventListener('click', (event) => {
-            closeWindow(event.target.parentNode);
-        });
-    }
-
+const displayFeaturedSauces = () => {
+    fetch('http://localhost:8000/sauces').then(function(response) {
+        response.json().then(function(data) {
+            let container = document.querySelector(queryStrings.homeProductsContainer)
+            data.forEach((sauce) => {
+                let spiceHtml = getHtmlFromSpice(sauce)
+                if (sauce.featured === true) {
+                    container.insertAdjacentHTML('beforeend', 
+                    `<a href="/productDetails?id=${sauce.id}" class="product-list__card" id="${sauce.id}">
+                    <img src="images/product-tall/${sauce.imgPath}" alt="${sauce.name}" class="product-list__image">
+                    <h5 class="product-list__title">${sauce.brand} - ${sauce.name}</h5>
+                    <div class="product-list__hotness--tall">
+                        ${spiceHtml} 
+                    </div>
+                    <div class="product-list__volume">${sauce.size} fl oz.</div>
+                    </a>`) 
+                }
+            })
+        })
+    })
 }
 
 const init = () => {
-
     addListeners();
- 
+    displayFeaturedSauces();
+    
 }
-
-let slidesArray = new SlideArray('images/slideshow/slideshow', 4);
 init();
+let slidesArray = new SlideArray('images/slideshow/slideshow', 4);

@@ -63,7 +63,7 @@ body {
     align-items: center;
     z-index: 999;
     width: 100vw;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
 }
 
 .nav__item {
@@ -338,6 +338,48 @@ body {
 
 /* SEARCH */
 .search {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input[type=text] {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.search__value {
+    display: none;
+    align-items: center;
+    margin: 12px 0;
+    background-color: white;
+}
+
+.search__value__image {
+    width: 60px;
+    height: 60px;
+}
+
+.search__value__name {
+    margin: 0 12px;
+    text-decoration: none;
+    text-align: left;
+    color: black;
+}
+
+.search__values__container {
+    background-color: rgba(0,0,0,0.05);
+    padding: 12px 0;
+    display: none;
+
+}
+
+/* .search {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 15vh;
@@ -411,11 +453,11 @@ body {
         margin: auto;
     }
 
-    .advanced-search {
+    /* .advanced-search {
         width: 70vw;
         margin: auto;
-    }
-}
+    } */
+} 
 
 /* CONTACT FORM */
 
@@ -483,6 +525,13 @@ body {
 #contact-form-submit {
     font-size: 1rem;
     margin: 30px 0;
+}
+
+.contact-form--success {
+    background-color: green;
+    color: white;
+    width: 100%;
+    margin-top: 100px;
 }
 
 @media (min-width: 800px) {

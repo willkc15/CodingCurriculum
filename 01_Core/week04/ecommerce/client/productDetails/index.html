@@ -14,7 +14,7 @@
 
     <!-- Nav -->
     <nav class="nav">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
             <img src="images/assets/logo.png">
             <div class="logo__text">
                 <div class="logo__title">Pepperich</div>
@@ -22,38 +22,17 @@
             </div>
         </a>
         <div class="nav__list">
-            <a href="index.html" class="nav__item">Home</a>
-            <a href="products.html" class="nav__item">Products</a>
-            <a href="contact.html" class="nav__item">Contact Us</a>
+            <a href="/" class="nav__item">Home</a>
+            <a href="/products" class="nav__item">Products</a>
+            <a href="/contact" class="nav__item">Contact Us</a>
         </div>
         <a id="mobile-nav-icon">
             <i class="fas fa-bars fa-2x "></i> 
         </a>
     </nav>
     <!-- Product Details -->
-    <div class="product-details">
-        <div class="product-details__image">
-            <img src="/images/product-square/bravado-pineapple-habanero.jpg" alt="">
-        </div>
-        <div class="product-details__container">
-            <h2>Bravado | Pineapple Habanero</h2>
-            <div class="product-details__reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span>127 Reviews</span>
-            </div>
-            <h3>$12.00</h3>
-            <div class="button btn-md btn-cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span>Add to Cart</span>
-            </div>
-            <p class="product-details__description">Fresh pineapple dominates this sauce, shining through the habanero heat. Yellow bell pepper lends only a touch of sweetness. A great option for people who like fruit sauces but not overly sweet ones. Goes well with rice & beans, fish dishes, or mixed into a salad dressing.</p>
-            <p class="product-details__ingredients"><b>Ingredients:</b> Pineapple, white wine vinegar, yellow bell peppers, habanero, garlic, salt</p>
-            <p class="product-details__size"><b>Size:</b> 5 oz</p>
-        </div>
+    <div class="product-details" id="product-details-container">
+        <!-- Individual sacue data inserted here from api call -->
     </div>
       <!-- Footer -->
       <footer>
@@ -78,7 +57,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script type="module" src="productDetails/script.js"></script>
 
 </body>
 </html>

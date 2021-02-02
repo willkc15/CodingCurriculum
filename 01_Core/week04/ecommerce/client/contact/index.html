@@ -19,9 +19,9 @@
             </div>
         </a>
         <div class="nav__list">
-            <a href="index.html" class="nav__item">Home</a>
-            <a href="products.html" class="nav__item">Products</a>
-            <a href="contact.html" class="nav__item">Contact Us</a>
+            <a href="/" class="nav__item">Home</a>
+            <a href="/products" class="nav__item">Products</a>
+            <a href="/contact" class="nav__item">Contact Us</a>
         </div>
         <a id="mobile-nav-icon">
             <i class="fas fa-bars fa-2x "></i> 
@@ -30,7 +30,7 @@
     <!-- Contact form -->
     <div class="contact-form">
         <h3 id="form-intro">We'll contact you! Fill the form out below and we'll reach out soon.</h3>
-        <form action="contact.html" method="GET">
+        <form action="/contact?submitted=true" method="POST" id ="contact-form">
             <div class="contact-form__container">
                 <label for="name-field">Full name</label>
                 <input name="name" id="name-field"type="text" required>
@@ -76,7 +76,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script type="module" src="contact/script.js"></script>
 
 </body>
 </html>
