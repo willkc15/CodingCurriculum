@@ -23,7 +23,6 @@ const displaySauces = (promise) => {
             </a>`)
         })
     })
-
 }
 
 // Adds hidden products to search bar which can be shown/hidden based off user input
@@ -41,6 +40,7 @@ const activateSearchBar = (promise) => {
     })
 }
 
+//Handles the search bar functionality, called every time there is a new value in the search bar
 const filterSearch = (searchString) => {
     let searchValues = document.querySelectorAll(queryStrings.searchValue)
     for (let value of searchValues) {
@@ -53,6 +53,7 @@ const filterSearch = (searchString) => {
 }
 
 const addEventListeners = () => {
+    //If input changes from blank, show the search bar values pane. If it goes back to blank, hide it
     document.querySelector(queryStrings.searchBar).addEventListener('input', (event) => {
         if (event.target.value != '') {
             document.querySelector(queryStrings.searchValuesContainer).style.display = "block"
@@ -67,11 +68,8 @@ const addEventListeners = () => {
     })
 
 }
-const init = () => {
-   addEventListeners();
-}
 
-init()
+addEventListeners()
 let promise = fetchSauces()
 displaySauces(promise)
 activateSearchBar(promise)

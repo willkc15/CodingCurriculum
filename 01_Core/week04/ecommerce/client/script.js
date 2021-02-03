@@ -1,5 +1,6 @@
 import { queryStrings, getHtmlFromSpice, toggleMobileNav} from './utils.js'
 
+//SlideArray is the array of slides, has a list of images, size, and current index
 function SlideArray (base, size) {
     this.cache = [];
     this.size = size;
@@ -11,6 +12,7 @@ function SlideArray (base, size) {
     }
 }
 
+//Allows us to go to the next image, going either forward or backward
 SlideArray.prototype.nextImage = function(element, direction='forward') {
     
     var element = document.querySelector(queryStrings.slideshowImage)
@@ -39,25 +41,7 @@ SlideArray.prototype.nextImage = function(element, direction='forward') {
     dots[this.index].classList.add('dot--selected');
 }
 
-const addListeners = () => {
-    if (document.querySelector(queryStrings.nextArrow)) {
-        document.querySelector(queryStrings.nextArrow).addEventListener('click', () => {
-            slidesArray.nextImage(queryStrings.slideshowImageID);
-        });
-    }
-
-    if (document.querySelector(queryStrings.prevArrow)) {
-        document.querySelector(queryStrings.prevArrow).addEventListener('click', () => {
-            slidesArray.nextImage(queryStrings.slideshowImageID, 'backward');
-        });
-    }
-    if (document.querySelector(queryStrings.mobileNavIcon)) {
-        document.querySelector(queryStrings.mobileNavIcon).addEventListener('click', () => {
-            toggleMobileNav();
-        })
-    }
-}
-
+//Fetches "featured" sauces and displays them
 const displayFeaturedSauces = () => {
     fetch('http://localhost:8000/sauces').then(function(response) {
         response.json().then(function(data) {
@@ -80,10 +64,25 @@ const displayFeaturedSauces = () => {
     })
 }
 
-const init = () => {
-    addListeners();
-    displayFeaturedSauces();
-    
+const addListeners = () => {
+    if (document.querySelector(queryStrings.nextArrow)) {
+        document.querySelector(queryStrings.nextArrow).addEventListener('click', () => {
+            slidesArray.nextImage(queryStrings.slideshowImageID);
+        });
+    }
+
+    if (document.querySelector(queryStrings.prevArrow)) {
+        document.querySelector(queryStrings.prevArrow).addEventListener('click', () => {
+            slidesArray.nextImage(queryStrings.slideshowImageID, 'backward');
+        });
+    }
+    if (document.querySelector(queryStrings.mobileNavIcon)) {
+        document.querySelector(queryStrings.mobileNavIcon).addEventListener('click', () => {
+            toggleMobileNav();
+        })
+    }
 }
-init();
+
+addListeners();
+displayFeaturedSauces();
 let slidesArray = new SlideArray('images/slideshow/slideshow', 4);

@@ -1,9 +1,14 @@
 import {queryStrings, getQueryParamById, toggleMobileNav} from '../utils.js'
 
-const getSingleSauce = (id) => {
-    fetch(`http://localhost:8000/sauces/${id}`)
-    .then(response => response.json())
-    .then(data => {
+//Takes an id, then fetches the sauce and returns a promise to that sauces data
+const getSauceById = async (id) => {
+    const response = await fetch(`http://localhost:8000/sauces/${id}`)
+    return response.json()
+}
+
+//Takes a promise which resolves to a specific hot sauce's data, displays that data 
+const displaySauce = (promise) => {
+    promise.then(data => {
         let sauce = data[0]
         let productDetailsContainer = document.querySelector(queryStrings.productDetailsContainer);
         productDetailsContainer.insertAdjacentHTML('beforeend', `
@@ -33,8 +38,6 @@ const getSingleSauce = (id) => {
     })
 }
 
-
-
 const addEventListeners = () => {
     if (document.querySelector(queryStrings.mobileNavIcon)) {
         document.querySelector(queryStrings.mobileNavIcon).addEventListener('click', () => {
@@ -43,10 +46,11 @@ const addEventListeners = () => {
     }
 }
 
-const init = () => {
-    addEventListeners()
-    let paramId = getQueryParamById('id')
-    getSingleSauce(paramId);
-}
 
-init();
+addEventListeners()
+let paramId = getQueryParamById('id')
+let promise = getSauceById(paramId)
+displaySauce(promise)
+
+
+

@@ -10,10 +10,6 @@ const addEventListeners = () => {
     document.querySelector(queryStrings.mobileNavIcon).addEventListener('click',  toggleMobileNav)
 }
 
-const init = () => {
-    addEventListeners()
-}
-
-init()
+addEventListeners()
 let isSubmitted = getQueryParamById("submitted")
 if (isSubmitted == 'true') formSuccess()
